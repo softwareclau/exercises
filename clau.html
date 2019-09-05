@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    mi primera pagina
+  </title>
+  <style>
+    body {
+      background-color: pink;
+      height: 250px;
+    }
+    .btn {
+      background-color: green;
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+  <p>
+    esto es lo que se va a ver en mi pagina
+  </p>
+  <button class="btn" id="btn-1">
+    boton 1
+  </button>
+  <button class="btn" id="btn-2">
+    boton 2
+  </button>
+  <script>
+
+    var txt = "asdfghjkl"
+
+    $('#btn-1').on('click', () => {
+      console.log('click btn 1', Date.now());
+      $('#btn-2').html(txt)
+    });
+
+    $('#btn-2').on('click', () => {
+      $('#btn-1').html(txt)
+    });
+
+  </script>
+</body>
+</html>
